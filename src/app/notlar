@@ -1,0 +1,12 @@
+üç module var
+core çekirdek
+shared
+ ortak
+ feature module(admin module,catalog,stock,order module)
+
+ kullanıcı ilk girdiği zaman tüm moduller yüklenicek
+ buda yavaşlama demek
+ bunun önlemek içinde lazy loading kullanıcaz
+ kullanıcı bu modullerle alakalı
+bir linke tıklandığında ilgili module
+yüklenicek

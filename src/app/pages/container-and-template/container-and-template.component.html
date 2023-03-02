@@ -1,0 +1,38 @@
+<table>
+  <thead>
+    <tr>
+      <th>pic</th>
+      <th>id</th>
+      <th>userId</th>
+      <th>title</th>
+      <th>body</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let p of posts">
+      <ng-container *ngTemplateOutlet="postrow;context:{postData:{post:p}}" >
+
+      </ng-container>
+
+    </tr>
+  </tbody>
+</table>
+
+
+<
+<ng-template #postrow let-data="postData">
+  <td>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" style="width: 100px;height: 100px;" >
+  </td>
+  <td>
+    {{data.post?.id}}
+  </td> <td>
+    {{data.post?.userId}}
+  </td> <td>
+    {{data.post?.title}}
+  </td> <td>
+    {{data.post?.body}}
+  </td>
+</ng-template>
